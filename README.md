@@ -26,13 +26,7 @@ A continuación, se presentan capturas de la interfaz de usuario, destacando la 
   <br>
   <i>Interfaz del Carrito de Compras.</i>
 </p>
-| Vista | Descripción |
-| :--- | :--- |
-| **Principal** | Sección Hero con buscador integrado y grilla de cursos disponibles. |
-| **Carrito Activo** | Desplegable que muestra el detalle de productos, cantidades y el botón de vaciado. |
-| **Feedback Visual** | Contador dinámico en el encabezado que refleja la cantidad de ítems seleccionados. |
 
-*(Nota: Para visualizar tus propias capturas, asegúrate de subirlas a una carpeta `/img` en tu repositorio y actualizar las rutas en este archivo).*
 
 ## 📂 Estructura de Archivos
 

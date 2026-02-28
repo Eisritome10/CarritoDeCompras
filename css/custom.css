@@ -1,0 +1,79 @@
+:root {
+    --primary-color: #2b8b3b;
+    --secondary-color: #e44e52;
+    --white: #ffffff;
+    --gray-light: #e1e1e1;
+    --bg-body: #f5f3f3;
+}
+
+html { font-size: 62.5%; }
+body { background-color: var(--bg-body); font-size: 1.6rem; font-family: 'Raleway', sans-serif; }
+
+/* Accesibilidad */
+.visually-hidden {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;
+}
+
+header { padding: 2rem 0; background: var(--white); text-align: center; }
+@media (min-width: 750px) { header { text-align: left; } }
+
+/* Carrito y Contador */
+.submenu { position: relative; display: inline-block; }
+#contador-carrito {
+    position: absolute; top: -5px; right: -10px;
+    background-color: var(--secondary-color); color: white;
+    border-radius: 50%; padding: 2px 8px; font-size: 1.1rem; font-weight: bold;
+}
+
+#carrito {
+    display: none; position: absolute; right: 0; top: 100%; z-index: 10;
+    background-color: var(--white); padding: 2rem; min-width: 35rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.1); border-radius: 0.5rem;
+}
+.submenu:hover #carrito { display: block; }
+
+.total-contenedor {
+    margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--gray-light);
+    text-align: right; font-size: 1.8rem; color: var(--primary-color);
+}
+.total-contenedor span { font-weight: bold; }
+
+/* Hero y Buscador */
+#hero { background-image: url(../img/hero.jpg); height: 35rem; background-size: cover; background-position: center; }
+.contenido-hero { margin-top: 8rem; color: var(--white); }
+.contenido-hero form { position: relative; }
+.submit-buscador {
+    position: absolute; right: 0; top: 0; height: 100%; width: 5rem;
+    background: transparent url(../img/lupa.png) no-repeat center;
+    border: none; cursor: pointer; text-indent: -999rem;
+}
+
+.contenido-hero form #buscador { 
+    height: 5rem; 
+    margin-bottom: 0; 
+    padding-right: 6rem;
+    color: #333333; /* Esto hará que el texto que escribes sea gris oscuro/negro */
+    background-color: var(--white); /* Aseguramos que el fondo sea blanco */
+}
+
+/* Cambia el color del texto de sugerencia (placeholder) */
+#buscador::placeholder {
+    color: #888888;
+}
+
+
+/* Otros */
+.barra { padding: 3rem 0; background: linear-gradient(to right, var(--primary-color), var(--secondary-color)); color: var(--white); }
+.icono { background-repeat: no-repeat; background-position: left center; padding-left: 6rem; background-size: 3.5rem; }
+.icono1 { background-image: url(../img/icono1.png); }
+.icono2 { background-image: url(../img/icono2.png); }
+.icono3 { background-image: url(../img/icono3.png); }
+
+.card { border: 1px solid var(--gray-light); background: var(--white); border-radius: 0.5rem; transition: transform 0.3s; margin-bottom: 2rem; }
+.card:hover { transform: translateY(-5px); }
+.info-card { padding: 2rem; }
+.info-card .precio { text-decoration: line-through; color: #888; }
+.info-card .precio span { font-weight: bold; font-size: 2rem; color: #333; }
+
+.borrar-curso { background-color: #ff4d4d; border-radius: 50%; padding: 2px 8px; color: white; text-decoration: none; font-weight: bold; }
